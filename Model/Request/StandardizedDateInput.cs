@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StandardizedDate.Properties.Model.Request
+namespace StandardizedDate.Model.Request
 {
     public class StandardizedDateInput
     {

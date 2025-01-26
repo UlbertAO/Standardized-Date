@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using StandardizedDate.Properties.Model.Request;
-using StandardizedDate.Properties.Model.Response;
+using StandardizedDate.Model.Request;
+using StandardizedDate.Model.Response;
 
 namespace StandardizedDate
 {
