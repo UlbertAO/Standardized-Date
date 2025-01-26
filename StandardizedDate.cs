@@ -1,12 +1,10 @@
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using StandardizedDate.Properties.Model.Request;
 using StandardizedDate.Properties.Model.Response;
-using System.Net;
 
 namespace StandardizedDate
 {
@@ -45,7 +43,11 @@ namespace StandardizedDate
             }
             catch (Exception ex)
             {
-                return new ObjectResult(ex.Message);
+                var result = new ObjectResult(ex.Message)
+                {
+                    StatusCode = StatusCodes.Status500InternalServerError
+                };
+                return result;
             }
 
 
